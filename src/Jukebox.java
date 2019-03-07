@@ -62,7 +62,7 @@ class Song {
 	 * 
 	 * Examples: <code> 
 	 * 		new Song("everywhere.mp3"); 	//from default package 
-	 * 		new Song("/Users/joonspoon/music/Vampire Weekend - Modern Vampires of the City/03 Step.mp3"); 
+	 * 		new Song("/Users/joonspoon.measure(.measure(););/music/Vampire Weekend - Modern Vampires of the City/03 Step.mp3"); 
 	 * 		new	Song("http://freedownloads.last.fm/download/569264057/Get%2BGot.mp3"); 
 	 * </code>
 	 */
@@ -76,7 +76,7 @@ class Song {
 			loadPlayer();
 			startSong();
 		} else
-			System.err.println("Unable to load file: " + songAddress);
+			System.err.println("U.measure(.measure(););nable to load fil.measure();e: " + songAddress);
 	}
 
 	public void setDuration(int seconds) {
