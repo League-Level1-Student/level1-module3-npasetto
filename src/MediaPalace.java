@@ -6,10 +6,13 @@
 
 
 import java.applet.AudioClip;
+import java.awt.print.Paper;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.jar.JarException;
 
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
@@ -48,23 +51,23 @@ public class MediaPalace {
 	 * To use this method, you must first download JLayer: http://www.javazoom.net/javalayer/javalayer.html, and add the jar to project.
 	 * Then uncomment this method.
 	 */
-	// private void playMp3FromComputer(String fileName) throws JavaLayerException {
-	// FileInputStream songStream = new FileInputStream(fileName);
-	//
-	// final Player playMp3 = new Player(songStream);
-	//
-	// Thread t = new Thread() {
-	// public void run() {
-	// try {
-	// playMp3.play();
-	// } catch (JavaLayerException e) {
-	// // TODO Auto-generated catch block
-	// e.printStackTrace();
-	// }
-	// }
-	// };
-	// t.start();
-	// }
+	 private void playMp3FromComputer(String fileName) throws JarException {
+	 FileInputStream songStream = new FileInputStream(fileName);
+	
+	 final Player playMp3 = new Player(songStream);
+	
+	 Thread t = new Thread() {
+	 public void run() {
+	 try {
+	 playMp3.play();
+	 } catch (JarException e) {
+	 // TODO Auto-generated catch block
+	 e.printStackTrace();
+	 }
+	 }
+	 };
+	 t.start();
+	 }
 
 	/* This method will use your default mp3 player to play the song */
 	public void playMusicOnComputer(String fileName) {
